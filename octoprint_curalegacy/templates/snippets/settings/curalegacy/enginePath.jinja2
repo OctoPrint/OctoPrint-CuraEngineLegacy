@@ -1,0 +1,10 @@
+<div class="control-group" data-bind="css: {error: pathBroken(), success: pathOk()}">
+    <label class="control-label" for="settings-curalegacy-path">{{ _('Path to CuraEngine') }}</label>
+    <div class="controls">
+        <div class="input-append">
+            <input type="text" class="input-block-level" data-bind="value: settings.plugins.curalegacy.cura_engine, valueUpdate: 'afterkeydown'" id="settings-curalegacy-path">
+            <button class="btn" type="button" data-bind="click: testEnginePath, enable: settings.plugins.curalegacy.cura_engine(), css: {disabled: !settings.plugins.curalegacy.cura_engine()}">{{ _('Test') }}</button>
+        </div>
+        <span class="help-block" data-bind="visible: pathBroken() || pathOk(), text: pathText"></span>
+    </div>
+</div>

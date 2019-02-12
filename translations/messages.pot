@@ -1,0 +1,207 @@
+# Translations template for OctoPrint-CuraLegacy.
+# Copyright (C) 2019 The OctoPrint Project
+# This file is distributed under the same license as the
+# OctoPrint-CuraLegacy project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OctoPrint-CuraLegacy 1.0.0\n"
+"Report-Msgid-Bugs-To: i18n@octoprint.org\n"
+"POT-Creation-Date: 2019-02-12 15:50+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: octoprint_curalegacy/static/js/curalegacy.js:188
+msgid "Profile import failed"
+msgstr ""
+
+#: octoprint_curalegacy/static/js/curalegacy.js:189
+msgid ""
+"Could not import the provided profile, it might be invalid. Check "
+"<code>octoprint.log</code> for details"
+msgstr ""
+
+#: octoprint_curalegacy/static/js/curalegacy.js:243
+msgid "The path doesn't exist"
+msgstr ""
+
+#: octoprint_curalegacy/static/js/curalegacy.js:245
+msgid "The path is not a file"
+msgstr ""
+
+#: octoprint_curalegacy/static/js/curalegacy.js:247
+msgid "The path is not an executable"
+msgstr ""
+
+#: octoprint_curalegacy/static/js/curalegacy.js:250
+msgid "The path is valid"
+msgstr ""
+
+#: octoprint_curalegacy/templates/curalegacy_settings.jinja2:1
+msgid "General"
+msgstr ""
+
+#: octoprint_curalegacy/templates/curalegacy_settings.jinja2:3
+msgid ""
+"\n"
+"    Specify the path to the CuraEngine Legacy binary. Note that only\n"
+"    <strong>versions up to and including 15.04</strong> are supported.\n"
+"    CuraEngine version 15.06 or newer is <strong>not</strong>\n"
+"    compatible with this plugin.\n"
+msgstr ""
+
+#: octoprint_curalegacy/templates/curalegacy_settings.jinja2:15
+msgid "Profiles"
+msgstr ""
+
+#: octoprint_curalegacy/templates/curalegacy_settings.jinja2:19
+#: octoprint_curalegacy/templates/curalegacy_wizard.jinja2:25
+msgid "Import Profile..."
+msgstr ""
+
+#: octoprint_curalegacy/templates/curalegacy_settings.jinja2:22
+#, python-format
+msgid ""
+"For more information on configuration and usage please <a "
+"href=\"%(plugin_cura_homepage)s\" target=\"_blank\">see the Plugin's "
+"homepage</a>."
+msgstr ""
+
+#: octoprint_curalegacy/templates/curalegacy_wizard.jinja2:2
+msgid "Configure CuraEngine Legacy"
+msgstr ""
+
+#: octoprint_curalegacy/templates/curalegacy_wizard.jinja2:3
+msgid ""
+"\n"
+"        The path to CuraEngine has not yet been set up, in order to be "
+"able to use\n"
+"        CuraEngine for slicing it needs to be specified.\n"
+"    "
+msgstr ""
+
+#: octoprint_curalegacy/templates/curalegacy_wizard.jinja2:16
+msgid "Set up a slicing profile"
+msgstr ""
+
+#: octoprint_curalegacy/templates/curalegacy_wizard.jinja2:17
+msgid ""
+"You haven't imported a slicing profile to use for slicing with CuraEngine"
+"\n"
+"    yet. If you plan on slicing from within OctoPrint then you should do "
+"this now.\n"
+"    Otherwise just skip this step."
+msgstr ""
+
+#: octoprint_curalegacy/templates/curalegacy_wizard.jinja2:28
+msgid ""
+"\n"
+"            <strong>Don't know where to get a profile?</strong> In order "
+"to export\n"
+"            a slicing profile from the Cura desktop UI up to and "
+"including version 15.04.06 (not versions\n"
+"            2.1 and later which are actually newer than 15.04), open it, "
+"set up your profile, then click\n"
+"            on \"File\" and there on \"Save Profile\". You can import the"
+" <code>.ini</code> file this creates\n"
+"            via the \"Import Profile\" button.\n"
+"        "
+msgstr ""
+
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/engineLog.jinja2:4
+msgid "Log the output of CuraEngine to plugin_cura_engine.log"
+msgstr ""
+
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/enginePath.jinja2:2
+msgid "Path to CuraEngine"
+msgstr ""
+
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/enginePath.jinja2:6
+msgid "Test"
+msgstr ""
+
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/profileImporter.jinja2:4
+msgid "Import Existing Cura Legacy Profile"
+msgstr ""
+
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/profileImporter.jinja2:9
+msgid "Profile ini file"
+msgstr ""
+
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/profileImporter.jinja2:13
+msgid "Browse..."
+msgstr ""
+
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/profileImporter.jinja2:21
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/profiles.jinja2:3
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/profiles.jinja2:8
+msgid "Identifier"
+msgstr ""
+
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/profileImporter.jinja2:27
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/profiles.jinja2:3
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/profiles.jinja2:9
+msgid "Name"
+msgstr ""
+
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/profileImporter.jinja2:33
+msgid "Description"
+msgstr ""
+
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/profileImporter.jinja2:41
+msgid "Make default profile"
+msgstr ""
+
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/profileImporter.jinja2:48
+msgid "Overwrite existing file"
+msgstr ""
+
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/profileImporter.jinja2:53
+msgid ""
+"\n"
+"            You can import your existing profile <code>.ini</code> files "
+"from <strong>Cura 15.04.x or older</strong>\n"
+"            here. Anything but those are <strong>not supported</strong>. "
+"That especially means that <code>.json</code>\n"
+"            profiles from Cura 15.06.x and <code>.curaprofile</code> "
+"profiles from Cura 2.x will not work, and neither\n"
+"            will custom Cura profile formats that third party tools like "
+"e.g. Repetier create.\n"
+"        "
+msgstr ""
+
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/profileImporter.jinja2:61
+msgid "Abort"
+msgstr ""
+
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/profileImporter.jinja2:62
+msgid "Confirm"
+msgstr ""
+
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/profiles.jinja2:3
+msgid "Sort by"
+msgstr ""
+
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/profiles.jinja2:3
+msgid "ascending"
+msgstr ""
+
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/profiles.jinja2:10
+msgid "Actions"
+msgstr ""
+
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/profiles.jinja2:18
+msgid "Make default"
+msgstr ""
+
+#: octoprint_curalegacy/templates/snippets/settings/curalegacy/profiles.jinja2:18
+msgid "Delete Profile"
+msgstr ""
+

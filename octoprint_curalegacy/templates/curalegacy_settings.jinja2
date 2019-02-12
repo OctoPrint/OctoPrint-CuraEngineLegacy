@@ -1,0 +1,25 @@
+<h4>{{ _('General') }}</h4>
+
+<p>{% trans %}
+    Specify the path to the CuraEngine Legacy binary. Note that only
+    <strong>versions up to and including 15.04</strong> are supported.
+    CuraEngine version 15.06 or newer is <strong>not</strong>
+    compatible with this plugin.
+{% endtrans %}</p>
+
+<form class="form-horizontal">
+    {% include "snippets/settings/curalegacy/enginePath.jinja2" %}
+    {% include "snippets/settings/curalegacy/engineLog.jinja2" %}
+</form>
+
+<h4>{{ _('Profiles') }}</h4>
+
+{% include "snippets/settings/curalegacy/profiles.jinja2" %}
+
+<button class="btn pull-right" data-bind="click: function() { $root.showImportProfileDialog() }">{{ _('Import Profile...') }}</button>
+
+<div style="clear: both">
+    <small>{% trans %}For more information on configuration and usage please <a href="{{ plugin_cura_homepage }}" target="_blank">see the Plugin's homepage</a>.{% endtrans %}</small>
+</div>
+
+{% include "snippets/settings/curalegacy/profileImporter.jinja2" %}
