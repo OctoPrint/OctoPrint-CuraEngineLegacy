@@ -2,3 +2,4 @@ include README.md
 recursive-include octoprint_curalegacy/templates *
 recursive-include octoprint_curalegacy/translations *
 recursive-include octoprint_curalegacy/static *
+recursive-include octoprint_curalegacy/profiles *
