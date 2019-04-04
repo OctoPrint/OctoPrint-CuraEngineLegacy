@@ -11,7 +11,7 @@ plugin_package = "octoprint_curalegacy"
 
 # The plugin's human readable name. Can be overwritten within OctoPrint's internal data via __plugin_name__ in the
 # plugin module
-plugin_name = "OctoPrint-CuraLegacy"
+plugin_name = "OctoPrint-CuraEngineLegacy"
 
 # The plugin's version. Can be overwritten within OctoPrint's internal data via __plugin_version__ in the plugin module
 plugin_version = "1.0.2"
@@ -27,7 +27,7 @@ plugin_author = "Gina Häußge"
 plugin_author_email = "gina@octoprint.org"
 
 # The plugin's homepage URL. Can be overwritten within OctoPrint's internal data via __plugin_url__ in the plugin module
-plugin_url = "https://github.com/OctoPrint/OctoPrint-CuraLegacy"
+plugin_url = "https://github.com/OctoPrint/OctoPrint-CuraEngineLegacy"
 
 # The plugin's license. Can be overwritten within OctoPrint's internal data via __plugin_license__ in the plugin module
 plugin_license = "AGPLv3"

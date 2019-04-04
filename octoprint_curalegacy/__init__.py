@@ -23,13 +23,13 @@ from .profile import Profile
 from .profile import GcodeFlavors
 from .profile import parse_gcode_flavor
 
-class CuraLegacyPlugin(octoprint.plugin.SlicerPlugin,
-                       octoprint.plugin.SettingsPlugin,
-                       octoprint.plugin.TemplatePlugin,
-                       octoprint.plugin.AssetPlugin,
-                       octoprint.plugin.BlueprintPlugin,
-                       octoprint.plugin.StartupPlugin,
-                       octoprint.plugin.WizardPlugin):
+class CuraEngineLegacyPlugin(octoprint.plugin.SlicerPlugin,
+                             octoprint.plugin.SettingsPlugin,
+                             octoprint.plugin.TemplatePlugin,
+                             octoprint.plugin.AssetPlugin,
+                             octoprint.plugin.BlueprintPlugin,
+                             octoprint.plugin.StartupPlugin,
+                             octoprint.plugin.WizardPlugin):
 
 	# noinspection PyMissingConstructor
 	def __init__(self):
@@ -84,7 +84,7 @@ class CuraLegacyPlugin(octoprint.plugin.SlicerPlugin,
 
 	def get_template_vars(self):
 		return dict(
-			homepage="https://github.com/OctoPrint/OctoPrint-CuraLegacy/"
+			homepage="https://github.com/OctoPrint/OctoPrint-CuraEngineLegacy/"
 		)
 
 	##~~ WizardPlugin API
@@ -306,7 +306,7 @@ class CuraLegacyPlugin(octoprint.plugin.SlicerPlugin,
 
 				executable = normalize_path(self._settings.get(["cura_engine"]))
 				if not executable:
-					return False, u"Path to CuraEngine is not configured "
+					return False, u"Path to legacy CuraEngine is not configured "
 
 				working_dir = os.path.dirname(executable)
 
@@ -515,17 +515,17 @@ class CuraLegacyPlugin(octoprint.plugin.SlicerPlugin,
 	def get_update_information(self):
 		return dict(
 			curalegacy=dict(
-				displayName="Cura Legacy",
+				displayName="CuraEngine Legacy",
 				displayVersion=self._plugin_version,
 
 				# version check: github repository
 				type="github_release",
 				user="OctoPrint",
-				repo="OctoPrint-CuraLegacy",
+				repo="OctoPrint-CuraEngineLegacy",
 				current=self._plugin_version,
 
 				# update method: pip
-				pip="https://github.com/OctoPrint/OctoPrint-CuraLegacy/archive/{target_version}.zip"
+				pip="https://github.com/OctoPrint/OctoPrint-CuraEngineLegacy/archive/{target_version}.zip"
 			)
 		)
 
@@ -571,10 +571,10 @@ def _get_usage_from_length(filament_length, filament_diameter):
 	return usage
 
 
-__plugin_name__ = "Cura Legacy"
+__plugin_name__ = "CuraEngine Legacy"
 def __plugin_load__():
 	global __plugin_implementation__
-	__plugin_implementation__ = CuraLegacyPlugin()
+	__plugin_implementation__ = CuraEngineLegacyPlugin()
 
 	global __plugin_hooks__
 	__plugin_hooks__ = {

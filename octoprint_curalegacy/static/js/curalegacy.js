@@ -1,5 +1,5 @@
 $(function() {
-    function CuraLegacyViewModel(parameters) {
+    function CuraEngineLegacyViewModel(parameters) {
         var self = this;
 
         self.loginState = parameters[0];
@@ -321,7 +321,7 @@ $(function() {
     }
 
     OCTOPRINT_VIEWMODELS.push({
-        construct: CuraLegacyViewModel,
+        construct: CuraEngineLegacyViewModel,
         dependencies: ["loginStateViewModel", "settingsViewModel", "slicingViewModel"],
         elements: ["#settings_plugin_curalegacy", "#wizard_plugin_curalegacy"]
     });

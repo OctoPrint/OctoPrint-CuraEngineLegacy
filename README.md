@@ -1,12 +1,12 @@
-# OctoPrint Cura Legacy Plugin
+# OctoPrint CuraEngine Legacy Plugin
 
-The Cura Plugin allows slicing of STL files uploaded to OctoPrint directly via the CuraEngine **up to and including 
+The CuraEngine Legacy Plugin allows slicing of STL files uploaded to OctoPrint directly via the CuraEngine **up to and including 
 version 15.04.x**. It was bundled with OctoPrint up until version 1.3.10.
 
 > 📝 **Note**
 >
 > Versions of CuraEngine later than 15.04.x have changed their calling parameters in such a way that this 
-> plugin is not compatible to it. For this reason, please use only CuraEngine versions up to and including 15.04, 
+> plugin is not compatible to it. For this reason, please use only CuraEngine Legacy versions up to and including 15.04, 
 > as available in the `legacy` branch of the CuraEngine repository on Github.
 
 The plugin offers a settings module that allows configuring the path to the CuraEngine executable to use, as well as 
@@ -53,21 +53,21 @@ make
 After this has completed, you’ll find your shiny new build of CuraEngine in the build folder (full path for above 
 example: `~/CuraEngine/build/CuraEngine`).
 
-### Using Cura Profiles
+### Using Cura Legacy Profiles
 
-The Cura Plugin supports importing your existing profiles for Cura **up to and including Cura 15.04.x**. Newer Cura 
-releases (e.g. 15.06 or 2.x) use a different internal format that will not work with the Cura Legacy Plugin.
+The CuraEngine Legacy Plugin supports importing your existing profiles for Cura legacy versions **up to and including Cura 15.04.x**. Newer Cura 
+releases (e.g. 15.06, 2.x, 3.x, 4.x, ...) use a different internal format that will **not** work with the CuraEngine Legacy Plugin.
 
 You can find downloads of Cura 15.04.x for Windows, Mac and Linux on [Ultimaker’s download page](https://ultimaker.com/en/products/cura-software/list).
 
-In order to export a slicing profile from the Cura desktop UI, open it, set up your profile, then click on "File" and 
-there on "Save Profile". You can import the .ini-file this creates via the "Import Profile" button in the Cura Settings 
+In order to export a slicing profile from the legacy Cura desktop UI, open it, set up your profile, then click on "File" and 
+there on "Save Profile". You can import the .ini-file this creates via the "Import Profile" button in the CuraEngine Legacy Settings 
 within OctoPrint.
 
 ## Configuration
 
-The Cura plugin needs to be configured with the full path to your copy of the CuraEngine executable that it’s supposed 
-to use. You can do this either via the Cura plugin settings dialog or by manually configuring the path to the 
+The CuraEngine Legacy plugin needs to be configured with the full path to your copy of the CuraEngine Legacy executable that it’s supposed 
+to use. You can do this either via the CuraEngine Legacy plugin settings dialog or by manually configuring the path to the 
 executable via ``config.yaml``, example:
 
 ``` yaml
