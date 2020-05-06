@@ -11,7 +11,7 @@ import re
 # noinspection PyCompatibility
 from builtins import range
 # noinspection PyCompatibility
-from past.builtins import basestring
+from past.builtins import basestring, unicode
 
 class SupportLocationTypes(object):
 	NONE = "none"
@@ -652,7 +652,7 @@ class Profile(object):
 		if value is None:
 			return default
 
-		if isinstance(value, (str, unicode, basestring)):
+		if isinstance(value, basestring):
 			value = value.replace(",", ".").strip()
 
 		try:
@@ -667,7 +667,7 @@ class Profile(object):
 
 		if isinstance(value, bool):
 			return value
-		elif isinstance(value, (str, unicode, basestring)):
+		elif isinstance(value, basestring):
 			return value.lower() == "true" or value.lower() == "yes" or value.lower() == "on" or value == "1"
 		elif isinstance(value, (int, float)):
 			return value > 0
@@ -704,7 +704,7 @@ class Profile(object):
 
 		result = []
 		for k, v in profile.items():
-			if isinstance(v, (str, unicode)):
+			if isinstance(v, basestring):
 				result.append("{k}={v}".format(k=k, v=v.encode("utf-8")))
 			else:
 				result.append("{k}={v}".format(k=k, v=v))
@@ -756,7 +756,7 @@ class Profile(object):
 		else:
 			contents = self.get_gcode_template(key, extruder_count=extruder_count)
 
-		return unicode(prefix + re.sub("(.)\{([^\}]*)\}", self.replaceTagMatch, contents).rstrip() + '\n' + postfix).strip().encode('utf-8') + '\n'
+		return unicode(prefix + re.sub("(.)\{([^\}]*)\}", self.replaceTagMatch, contents).rstrip() + '\n' + postfix).strip().encode('utf-8') + b'\n'
 
 	def get_start_gcode_prefix(self, contents, extruder_count=1):
 		prefix = ""
