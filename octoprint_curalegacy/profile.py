@@ -756,7 +756,10 @@ class Profile(object):
 		else:
 			contents = self.get_gcode_template(key, extruder_count=extruder_count)
 
-		return unicode(prefix + re.sub("(.)\{([^\}]*)\}", self.replaceTagMatch, contents).rstrip() + '\n' + postfix).strip().encode('utf-8') + b'\n'
+		gcode = unicode(prefix + re.sub("(.)\{([^\}]*)\}", self.replaceTagMatch, contents).rstrip() + '\n' + postfix).strip().encode('utf-8') + b'\n'
+		if not isinstance(gcode, str):
+			gcode = gcode.decode('utf-8')
+		return gcode
 
 	def get_start_gcode_prefix(self, contents, extruder_count=1):
 		prefix = ""
