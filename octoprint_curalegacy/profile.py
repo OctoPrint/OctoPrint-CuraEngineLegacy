@@ -13,6 +13,8 @@ from builtins import range
 # noinspection PyCompatibility
 from past.builtins import basestring, unicode
 
+from octoprint.util import to_unicode
+
 class SupportLocationTypes(object):
 	NONE = "none"
 	TOUCHING_BUILDPLATE = "buildplate"
@@ -691,9 +693,9 @@ class Profile(object):
 			gcode = defaults[key]
 
 		if key in ("start_gcode", "end_gcode"):
-			return self.regex_broken_replacements.sub("{\\1}", gcode[extruder_count-1])
+			return self.regex_broken_replacements.sub("{\\1}", to_unicode(gcode[extruder_count-1]))
 		else:
-			return self.regex_broken_replacements.sub("{\\1}", gcode)
+			return self.regex_broken_replacements.sub("{\\1}", to_unicode(gcode))
 
 	def get_profile_string(self):
 		import base64
@@ -740,9 +742,9 @@ class Profile(object):
 			return '%s?%s?' % (pre, tag)
 
 		if (f % 1) == 0:
-			return pre + str(int(f))
+			return pre + to_unicode(int(f))
 
-		return pre + str(f)
+		return pre + to_unicode(f)
 
 	def get_gcode(self, key, extruder_count=1):
 		prefix = ""
@@ -760,10 +762,9 @@ class Profile(object):
 		else:
 			contents = self.get_gcode_template(key, extruder_count=extruder_count)
 
-		gcode = unicode(prefix + re.sub("(.)\{([^\}]*)\}", self.replaceTagMatch, contents).rstrip() + '\n' + postfix).strip().encode('utf-8') + b'\n'
-		if not isinstance(gcode, str):
-			gcode = gcode.decode('utf-8')
-		return gcode
+		return to_unicode(prefix
+			+ re.sub("(.)\{([^\}]*)\}", self.replaceTagMatch, contents).rstrip()
+			+ '\n' + postfix).strip() + '\n'
 
 	def get_start_gcode_prefix(self, contents, extruder_count=1):
 		prefix = ""

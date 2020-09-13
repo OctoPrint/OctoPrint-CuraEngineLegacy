@@ -132,7 +132,7 @@ class CuraEngineLegacyPlugin(octoprint.plugin.SlicerPlugin,
 				profile_dict = Profile.from_cura_ini(flask.request.values[input_upload_path])
 			except Exception as e:
 				self._logger.exception(u"Error while converting the imported profile")
-				return flask.make_response(u"Something went wrong while converting imported profile: {message}".format(message=str(e)), 500)
+				return flask.make_response(u"Something went wrong while converting imported profile: {message}".format(message=e), 500)
 
 		else:
 			self._logger.warn(u"No profile file included for importing, aborting")
@@ -334,7 +334,7 @@ class CuraEngineLegacyPlugin(octoprint.plugin.SlicerPlugin,
 
 				# Add the settings (sorted alphabetically) to the command
 				for k, v in sorted(engine_settings.items(), key=lambda s: s[0]):
-					args += ["-s", "%s=%s" % (k, str(v))]
+					args += ["-s", "%s=%s" % (k, to_unicode(v, errors="replace"))]
 				args += ["-o", machinecode_path, model_path]
 
 				self._logger.info(u"Running {!r} in {}".format(u" ".join(map(lambda x: to_unicode(x, errors="replace"),
